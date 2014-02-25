@@ -13,5 +13,5 @@ before_script: grunt build
 after_success:
   - chmod 600 .travis/deploy_key.pem # this key should have push access
   - ssh-add .travis/deploy_key.pem
-  - git remote add deploy git@github.com:tompekay/tompekay.github.io.git
+  - git remote add deploy https://github.com:tompekay/tompekay.github.io.git
   - git push deploy
