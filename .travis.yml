@@ -11,7 +11,7 @@ before_install:
 install: npm install
 before_script: grunt build
 after_success:
-  - chmod 600 .travis/deploy_key.pem # this key should have push access
-  - ssh-add .travis/deploy_key.pem
+  - chmod 600 .travis/deploy_key.pub # this key should have push access
+  - ssh-add .travis/deploy_key.pub
   - git remote add deploy https://github.com:tompekay/tompekay.github.io.git
   - git push deploy
