@@ -1,3 +1,23 @@
-<div>
-    {{outlet}}
+<div class="app">
+    <header class="header">
+        {{#link-to "index" class="brand"}}{{/link-to}}
+    </header>
+    <div class="container">
+        {{outlet}}
+    </div>
+    <footer class="footer">
+        <nav class="main_nav">
+            <ul class="main_nav__list">
+                <li class="main_nav__list_item">
+                    {{#link-to "index"}}Home{{/link-to}}
+                </li>
+                <li class="main_nav__list_item">
+                    {{#link-to "about"}}About{{/link-to}}
+                </li>
+                <li class="main_nav__list_item">
+                    {{#link-to "music"}}Music{{/link-to}}
+                </li>
+            </ul>
+        </nav>
+    </footer>
 </div>
