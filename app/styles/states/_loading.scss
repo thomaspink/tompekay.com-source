@@ -1,0 +1,37 @@
+.loading {
+    .header {
+        height: 52%;
+        box-shadow: 0 0 0 rgba(0,0,0,0);
+    }
+
+    .footer {
+        height: 50%;
+    }
+
+    .main_nav {
+        opacity: 0;
+    }
+
+    .loader {
+        display: block;
+        opacity: 1;
+        transition: opacity .1s .3s;
+    }
+
+    .nav_toggle {
+        display: none;
+    }
+}
+
+@media all and (max-width: 500px) {
+
+    .loading {
+        .footer {
+            height: 70px;
+        }
+        .header {
+            height: 100%;
+        }
+    }
+
+}

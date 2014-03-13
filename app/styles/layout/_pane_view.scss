@@ -1,0 +1,41 @@
+.pane_view {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    @include clearfix();
+}
+
+.pane_view__pane {
+    display: block;
+    width: 50%;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    float: left;
+}
+
+.pane_view__wrapper {
+    display: block;
+    padding: 30px;
+}
+
+@media all and (max-width: 740px) {
+  .pane_view__pane {
+      width: 30%;
+      &:first-child {
+          width: 70%;
+      }
+  }
+}
+
+@media all and (max-width: 540px) {
+  .pane_view__pane {
+      width: auto;
+      float: none;
+      &:first-child {
+          min-height: 0 !important;
+          width: auto;
+      }
+  }
+}

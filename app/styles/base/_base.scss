@@ -1,0 +1,23 @@
+html {
+    font-family: Lato, Arial, Verdana, 'Helvetica Neue', Helvetica, sans-serif;
+	-webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+       -moz-font-smoothing: antialiased;
+        -ms-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    color: black;
+    line-height: 1.4;
+}
+
+a,
+a:link,
+a:visited,
+a:active{
+    color:black;
+    text-decoration: underline;
+}
+
+a:hover {
+    text-decroation: none;
+}

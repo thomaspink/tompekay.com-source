@@ -1,0 +1,30 @@
+.loader {
+    display: block;
+    opacity: 0;
+    transition: opacity .1s 0s;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -25px;
+    margin-top: -25px;
+    z-index: 1000;
+    height: 48px;
+    width: 48px;
+    background: url(../images/spinner.gif) 50% 50% no-repeat;
+    background-size: 48px;
+}
+
+@media all and (max-width: 500px) {
+    .loader {
+        bottom: auto;
+        top: 200px;
+    }
+}
+
+@media
+(-webkit-min-device-pixel-ratio: 1.5),
+(min-resolution: 144dppx){
+    .loader {
+        background-image: url(../images/spinner@2x.gif);
+    }
+}

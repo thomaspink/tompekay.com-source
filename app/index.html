@@ -2,26 +2,63 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Yeoman Ember Starter Kit</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Tom Pekay</title>
 
+        <meta property="og:title" content="Tom Pekay - DJ, Techno Enthusiast, Artist"/>
+        <meta property="og:image" content="../images/og_image.jpg"/>
+        <meta property="og:url" content="http://tompekay.com"/>
+        <meta property="og:site_name" content="Website of Tom Pekay"/>
+        <meta property="og:type" content="website" />
+
+        <meta name="description" content="Tom Pekay - DJ, Techno Enthusiast, Artist">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+        <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic' rel='stylesheet' type='text/css'>
         <!-- build:css styles/main.css -->
         <link rel="stylesheet" href="styles/main.css">
         <!-- endbuild -->
 </head>
-    <body>
-        <!-- build:js(app) scripts/components.js -->
-        <script src="bower_components/jquery/jquery.js"></script>
-        <script src="bower_components/handlebars/handlebars.runtime.js"></script>
-        <script src="@@ember"></script>
-        <script src="@@ember_data"></script>
-        <!-- endbuild -->
+<body class="loading">
 
-        <!-- build:js(.tmp) scripts/templates.js -->
-        <script src="scripts/compiled-templates.js"></script>
-        <!-- endbuild -->
+    <!--[if lt IE 9]>
+        <div style="margin: 20px auto; padding: 0 20px; max-width: 369px">
+            <img src="images/brand_light.jpg" style="margin:0 auto 50px auto; display: block; width: 100%; max-width: 370px">
+            <p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+            <p>Get in touch with me on <a target="_blank" href="https://facebook.com/tompekay">facebook</a>, follow me on  <a target="_blank" href="https://facebook.com/twitter">twitter</a> or listen to my music on  <a target="_blank" href="https://mixcloud.com/tompekay">mixcloud.</a></p>
+            <p>For contact or booking requests, send a mail to <i>thomas.pink [at] me.com</i></p>
+        </div>
+    <![endif]-->
 
-        <!-- build:js(.tmp) scripts/main.js -->
-        <script src="scripts/combined-scripts.js"></script>
-        <!-- endbuild -->
+    <noscript>
+        <div style="margin: 20px auto; padding: 0 20px; max-width: 369px">
+            <img src="images/brand_light.jpg" style="margin:0 auto 50px auto; display: block; width: 100%; max-width: 370px">
+            <p>Sorry, this page need javascript enabled.</p>
+            <p>If you don't know how to enable javascript, please visit <a href="http://www.enable-javascript.com/">enable-javascript.com</a>
+            <p>Get in touch with me on <a target="_blank" href="https://facebook.com/tompekay">facebook</a>, follow me on  <a target="_blank" href="https://facebook.com/twitter">twitter</a> or listen to my music on  <a target="_blank" href="https://mixcloud.com/tompekay">mixcloud.</a></p>
+            <p>For contact or booking requests, send a mail to <i>thomas.pink [at] me.com</i></p>
+        </div>
+    </noscript>
+
+    <!--[if gt IE 8]> -->
+    <!-- build:js(app) scripts/components.js -->
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <script src="bower_components/jquery/jquery.js"></script>
+    <script src="bower_components/handlebars/handlebars.runtime.js"></script>
+    <script src="@@ember"></script>
+    <!--script src="@@ember_data"></script-->
+    <script src="bower_components/contentful/dist/contentful.js"></script>
+    <script src="bower_components/ic-ajax/dist/globals/main.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js(.tmp) scripts/templates.js -->
+    <script src="scripts/compiled-templates.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js(.tmp) scripts/main.js -->
+    <script src="scripts/combined-scripts.js"></script>
+    <!-- endbuild -->
+    <!-- <![endif]-->
 </body>
 </html>

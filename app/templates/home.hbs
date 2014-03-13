@@ -1,0 +1,10 @@
+<div class="fullscreen_video">
+    {{#if fields}}
+        <video id="video_home" class="fullscreen_video__object" preload loop
+        poster="//images.contentful.com/n2k8iiz52e40/fc8hg1JO8wGcGyEUuYEC0/79c5a274ea794a65f87216cf8333d033/tpk_about.jpg">
+        {{#each fields.video}}
+            <source {{bind-attr src=url}} {{bind-attr type=type}} />
+        {{/each}}
+        </video>
+    {{/if}}
+</div>

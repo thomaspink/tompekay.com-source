@@ -1,0 +1,9 @@
+.block_image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.clearfix {
+    @include clearfix();
+}

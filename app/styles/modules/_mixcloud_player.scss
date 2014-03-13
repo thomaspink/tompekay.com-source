@@ -1,0 +1,23 @@
+.mixcloud_player {
+    display: block;
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    transition: bottom .3s .3s ease-in-out;
+}
+
+.mixcloud_player--is-open .mixcloud_player {
+    bottom: 65px;
+}
+
+@media all and (max-width: 500px) {
+    .mixcloud_player {
+        bottom: -75px;    
+    }
+
+    .mixcloud_player--is-open .mixcloud_player {
+        bottom: -6px;
+    }
+}

@@ -1,0 +1,23 @@
+.fullscreen_video {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    display: block;
+    z-index: 2;
+}
+
+.fullscreen_video__object {
+    display:block;
+    position:absolute;
+}
+
+@media all and (max-width: 500px) {
+    .touch .fullscreen_video__object {
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        min-height: 100% !important;
+        background: blue;
+        display: none;
+    }
+}

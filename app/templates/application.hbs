@@ -1,15 +1,17 @@
 <div class="app">
-    <header class="header">
+    <header id="header" class="header">
         {{#link-to "index" class="brand"}}{{/link-to}}
+        <div class="loader"></div>
+        <button class="nav_toggle"><i class="icon-list"></i></button>
     </header>
-    <div class="container">
+    <div id="container" class="container">
         {{outlet}}
     </div>
-    <footer class="footer">
+    <footer class="footer" id="footer">
         <nav class="main_nav">
             <ul class="main_nav__list">
                 <li class="main_nav__list_item">
-                    {{#link-to "index"}}Home{{/link-to}}
+                    {{#link-to "home"}}Home{{/link-to}}
                 </li>
                 <li class="main_nav__list_item">
                     {{#link-to "about"}}About{{/link-to}}
