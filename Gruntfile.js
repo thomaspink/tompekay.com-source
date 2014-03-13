@@ -33,7 +33,11 @@ module.exports = function (grunt) {
             },
             neuter: {
                 files: ['<%= yeoman.app %>/scripts/{,*/}*.js'],
-                tasks: ['neuter']
+                tasks: ['neuter:app']
+            },
+            sass: {
+                files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
+                tasks: ['sass:server']
             },
             livereload: {
                 options: {
@@ -51,7 +55,7 @@ module.exports = function (grunt) {
             options: {
                 port: 9000,
                 // change this to '0.0.0.0' to access the server from outside
-                hostname: 'localhost'
+                hostname: '0.0.0.0'
             },
             livereload: {
                 options: {
