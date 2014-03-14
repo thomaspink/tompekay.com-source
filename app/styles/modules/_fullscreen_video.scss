@@ -9,6 +9,22 @@
 .fullscreen_video__object {
     display:block;
     position:absolute;
+    z-index: 3;
+}
+
+.fullscreen_video__mute, .fullscreen_video__volume {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 25px;
+    -webkit-appearance: none;
+    border: none;
+    background: transparent;
+    color: #FFF;
+    text-shadow: 0 0 5px #000;
+    opacity: .5;
+    z-index: 100;
 }
 
 @media all and (max-width: 500px) {

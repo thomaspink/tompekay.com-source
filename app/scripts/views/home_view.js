@@ -3,6 +3,8 @@ TompekayCom.HomeView = Ember.View.extend({
 
         var $videoContainer  = this.$('.fullscreen_video');
         var $videoObject     = this.$('.fullscreen_video__object');
+        var $muteButton      = this.$('.fullscreen_video__mute');
+        var $volumeUpButton  = this.$('.fullscreen_video__volume');
 
         var resizeTimer = null;
         resizeVideoObject();
@@ -19,6 +21,15 @@ TompekayCom.HomeView = Ember.View.extend({
             $(document.body).removeClass("loading");
             $videoObject.on('canplay', function() {
                 $videoObject[0].play();
+                $volumeUpButton.off('click');
+                $muteButton.off('click');
+                $volumeUpButton.on('click', volumeUp);
+                $muteButton.on('click', mute);
+                if(!!TompekayCom.docCookies.hasItem("homeVideoPlayerMuted")) {
+                    mute();
+                } else {
+                    volumeUp();
+                }
                 $(document.body).removeClass("loading");
             });
 
@@ -36,7 +47,7 @@ TompekayCom.HomeView = Ember.View.extend({
             var videoRatio       = 1686/949;
 
             $videoContainer.height(containerHeight);
-            
+
             if(videoRatio>containerRatio) {
                 var videoWidth = $(window).width() * (videoRatio/containerRatio);
                 $videoObject.css("height","100%");
@@ -50,6 +61,25 @@ TompekayCom.HomeView = Ember.View.extend({
                 $videoObject.css("left","0");
                 $videoObject.css("top",(videoHeight-containerHeight)/2*-1);
             }
+        }
+
+        function volumeUp(event) {
+            if(!!event)
+                event.preventDefault();
+            $muteButton.show();
+            $volumeUpButton.hide();
+            $videoObject[0].muted = false;
+            TompekayCom.docCookies.removeItem("homeVideoPlayerMuted");
+        }
+
+
+        function mute(event) {
+            if(!!event)
+                event.preventDefault();
+            $muteButton.hide();
+            $volumeUpButton.show();
+            $videoObject[0].muted = true;
+            TompekayCom.docCookies.setItem("homeVideoPlayerMuted",true);
         }
     }
 });
