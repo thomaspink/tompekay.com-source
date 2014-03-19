@@ -102,5 +102,8 @@ TompekayCom.HomeView = Ember.View.extend({
             $videoObject[0].muted = true;
             TompekayCom.docCookies.setItem("homeVideoPlayerMuted",true);
         }
+    },
+    willDestroy: function() {
+        $(window).off('resize.index.video');
     }
 });

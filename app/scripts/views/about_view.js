@@ -21,5 +21,8 @@ TompekayCom.AboutView = Ember.View.extend({
         //setTimeout(function() {
         $(document.body).removeClass("loading");
         //}, 5000);
+    },
+    willDestroy: function() {
+        $(window).off('resize.about.pane');
     }
 });

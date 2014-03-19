@@ -7,3 +7,23 @@
 .clearfix {
     @include clearfix();
 }
+
+.error_block {
+    display: block;
+    background-color: #F2DEDE;
+    margin: 20px 0;
+    padding: 20px;
+    border-left: 3px solid #D9534F;
+    color: black;
+
+    h4 {
+        color: #D9534F;
+        margin-top: 0;
+        margin-bottom: 5px;
+        font-size: 18px;
+    }
+
+    p {
+        text-align: left;
+    }
+}

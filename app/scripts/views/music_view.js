@@ -21,6 +21,9 @@ TompekayCom.MusicView = Ember.View.extend({
 
         $(document.body).removeClass("loading");
     },
+    willDestroy: function() {
+        $(window).off('resize.music.grid');
+    },
     cloudcastChanged: function() {
         var slug = this.get('controller.slug');
         $('.cloudcast_playing').removeClass('cloudcast_playing');

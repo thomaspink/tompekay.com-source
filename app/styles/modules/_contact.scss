@@ -1,0 +1,36 @@
+.contact {
+    background: url(../images/contact_bg.jpg) 50% 50% no-repeat;
+    background-size: cover;
+}
+
+.contact__wrapper {
+    width: 100%;
+    max-width: 500px;
+    padding: 30px;
+    min-height: 100%;
+    margin: 0 auto;
+    background: black;
+    background: rgba(0,0,0,.9);
+    *background: black;
+    color: white;
+    text-align: center;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+
+    a {
+        color: white;
+        text-decoration: none;
+        font-style: italic;
+    }
+}
+
+.contact__icon {
+    display: block;
+    text-align: center;
+    font-size: 22px;
+    margin: 40px 0;
+    font-style: normal;
+}
+
+.contact__form {}

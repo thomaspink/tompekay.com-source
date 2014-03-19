@@ -1,0 +1,62 @@
+<div class="contact">
+    <div class="contact__wrapper">
+        <h1>Nice to meet you!</h1>
+        <i class="icon-heart contact__icon"></i>
+        <p>You can catch me on <a href="https://facebook.com/tompekay" target="_blank">facebook</a>,
+            <br>follow me on <a href="https://twitter.com/tompekay" target="_blank">twitter</a> or
+            <br>listen to my music on <a href="http://mixcloud.com/tompekay" target="_blank">mixcloud</a>.</p>
+        <p>For contact or booking requests, send a <br>mail to thomas.pink [at] me.com of use the form below.</p>
+        <i class="contact__icon">...</i>
+        {{#if isSpam}}
+        <div class="error_block">
+            <h4>Spam-Protection</h4>
+            <p>Sorry - sending your request failed <br>because we think you are a spam-bot.<br>If not, please contact me direct via email. Thank you.</p>
+        </div>
+        {{else}}
+        {{#if isSent}}
+            <div class="success_block">
+                Request successfully sent!
+            </div>
+        {{else}}
+        {{#if isError}}
+        <div class="error_block">
+            <h4>Input Error</h4>
+            <p>Sorry - sending your request failed because we detected one or more input error.<br>Please fill the input fields properly.</p>
+        </div>
+        {{/if}}
+        {{#if isServerError}}
+        <div class="error_block">
+            <h4>Server Error</h4>
+            <p>Sorry - sending your request failed because we detected an error on the server.<br>Please try again later.</p>
+        </div>
+        {{/if}}
+        <form class="contact__form" {{action "submit" on="submit"}} novalidate>
+            <div class="select">
+                <label class="select__label">Booking request</label><i class="select__icon icon-sort"></i>
+                <select name="request_type" id="request_type" class="select__control">
+                    <option value="booking">Booking request</option>
+                    <option value="contact">Contact request</option>
+                </select>
+            </div>
+            <div {{bind-attr class=":form_block isEmailError:error"}}>
+                {{input type="email" value=email placeholder="your email address *"}}
+            </div>
+            <div {{bind-attr class=":form_block isNameError:error"}}>
+                {{input type="text" value=name placeholder="your name *"}}
+            </div>
+            <div {{bind-attr class=":form_block isMessageError:error"}}>
+                {{textarea placeholder="your message *" value=message rows="4"}}
+            </div>
+            {{#if isSending}}
+            <div class="btn">Sending ...</div>
+            {{else}}
+            <button class="btn">Send request</button>
+            {{/if}}
+            <div class="form_block">
+                {{input type="text" value=firstname placeholder="your first name *" class="spamprotect"}}
+            </div>
+        </form>
+        {{/if}}
+        {{/if}}
+    </div>
+</div>

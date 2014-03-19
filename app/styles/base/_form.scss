@@ -1,0 +1,138 @@
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"] {
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid white;
+    border-left: 1px solid white;
+    background: transparent;
+    -webkit-appearance: none;
+    outline: none;
+    padding: 0 0 0 15px;
+    line-height: 40px;
+    color: white;
+    font-family: Lato, Arial, Verdana, 'Helvetica Neue', Helvetica, sans-serif;
+    -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+       -moz-font-smoothing: antialiased;
+        -ms-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+    border-radius: 0;
+
+    .error & {
+        border-color: #D9534F;
+        border-left: 3px solid #D9534F;
+    }
+}
+
+select {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    height: 40px;
+}
+
+.select {
+    position: relative;
+    display: block;
+    width: 100%;
+    border: 1px solid white;
+    color: white;
+    line-height: 40px;
+    height: 40px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.select__control {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    -webkit-appearance: none;
+    opacity: 0;
+}
+
+.select__label {
+    padding: 0 20px;
+}
+
+.select__icon {
+    display: block;
+    position: absolute;
+    right: 14px;
+    top: 13px;
+    font-size: 14px;
+}
+
+textarea {
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid white;
+    border-left: 1px solid white;
+    background: transparent;
+    -webkit-appearance: none;
+    resize: none;
+    outline: none;
+    padding: 5px 0 5px 15px;
+    color: white;
+    font-family: Lato, Arial, Verdana, 'Helvetica Neue', Helvetica, sans-serif;
+    -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+       -moz-font-smoothing: antialiased;
+        -ms-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+    border-radius: 0;
+    
+    .error & {
+        border-color: #D9534F;
+        border-left: 3px solid #D9534F;
+    }
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    border: 1px solid white;
+    color: white;
+    line-height: 40px;
+    background: transparent;
+    font-family: Lato, Arial, Verdana, 'Helvetica Neue', Helvetica, sans-serif;
+    -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+       -moz-font-smoothing: antialiased;
+        -ms-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    text-transform: uppercase;
+
+    &:hover {
+        .no-touch & {
+            background: white;
+            color: black;
+        }
+    }
+}
+
+.spamprotect {
+    position: absolute;
+    width: 1px;
+    left: -999em;
+}
+
+.form_block {
+    margin-bottom: 20px;
+}
