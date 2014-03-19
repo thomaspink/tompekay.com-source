@@ -5,6 +5,7 @@ TompekayCom.HomeView = Ember.View.extend({
         var $videoObject     = this.$('.fullscreen_video__object');
         var $muteButton      = this.$('.fullscreen_video__mute');
         var $volumeUpButton  = this.$('.fullscreen_video__volume');
+        var $playButton      = this.$('.fullscreen_video__play');
 
         var resizeTimer = null;
         resizeVideoObject();
@@ -16,7 +17,27 @@ TompekayCom.HomeView = Ember.View.extend({
 
         $videoObject.off('canplay error');
         if(Modernizr.touch) {
+            if($(window).width() >500) {
+                resizeVideoObject();
+            }
             $(document.body).removeClass("loading");
+            $videoObject[0].loop = false;
+            $playButton.off('click');
+            $playButton.on('click', function(event) {
+                if(!!event)
+                    event.preventDefault();
+                $videoObject.show();
+                $f[0].play();
+                $playButton.hide();
+            });
+            $videoObject.off('ended webkitendfullscreen');
+            $videoObject.on('ended webkitendfullscreen', function() {
+                if(!!$videoObject[0].webkitExitFullScreen) {
+                    $videoObject[0].webkitExitFullScreen();
+                }
+                $videoObject.hide();
+                $playButton.show();
+            });
         }else {
             $(document.body).removeClass("loading");
             $videoObject.on('canplay', function() {

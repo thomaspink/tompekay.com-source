@@ -1,10 +1,14 @@
-<div class="fullscreen_video">
+<div class="fullscreen_video" style="background-image:url(images/video_poster.jpg)">
     {{#if fields}}
         <video id="video_home" class="fullscreen_video__object" preload loop
-        poster="//images.contentful.com/n2k8iiz52e40/fc8hg1JO8wGcGyEUuYEC0/79c5a274ea794a65f87216cf8333d033/tpk_about.jpg">
-        {{#each fields.video}}
-            <source {{bind-attr src=url}} {{bind-attr type=type}} />
-        {{/each}}
+        poster="images/video_poster.jpg">
+        {#each fields.video}
+            <!--source {bind-attr src=url} {bind-attr type=type} /-->
+            <source src="/test.mp4" type="video/mp4" />
+        {/each}
         </video>
+        <button class="fullscreen_video__mute"><i class="icon-volume-mute"></i></button>
+        <button class="fullscreen_video__volume"><i class="icon-volume-high"></i></button>
+        <button class="fullscreen_video__play"><i class="icon-play"></i></button>
     {{/if}}
 </div>

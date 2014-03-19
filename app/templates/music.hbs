@@ -2,12 +2,13 @@
 {{#if data}}
 <div class="clearfix">
 {{#each data}}
-    <a {{bind-attr href=url}} {{bind-attr id=url}} {{action playCloudcast key}} class="artwork" target="_blank">
+    <a {{bind-attr href=url}} {{bind-attr id=slug}} {{action playCloudcast key slug}} class="artwork" target="_blank">
         <img class="block_image" {{bind-attr src=pictures.large}}>
         <div class="artwork__overlay">
             <span class="artwork__title">{{name}}</span>
         </div>
         <i class="icon-play artwork__play"></i>
+        <i class="icon-volume-high artwork__playing"></i>
     </a>
 {{/each}}
 </div>

@@ -21,21 +21,24 @@
 }
 
 @media all and (max-width: 740px) {
-  .pane_view__pane {
-      width: 30%;
-      &:first-child {
-          width: 70%;
-      }
-  }
+    .pane_view__pane {
+        width: auto;
+        float: none;
+        min-height: 0 !important;
+        height: 600px;
+        &:first-child {
+            min-height: 0;
+            width: auto;
+            height: auto;
+        }
+    }
 }
 
-@media all and (max-width: 540px) {
-  .pane_view__pane {
-      width: auto;
-      float: none;
-      &:first-child {
-          min-height: 0 !important;
-          width: auto;
-      }
-  }
+@media all and (max-width: 500px) {
+    .pane_view__pane {
+        height: 400px;
+        &:first-child {
+            height: auto;
+        }
+    }
 }

@@ -20,5 +20,10 @@ TompekayCom.MusicView = Ember.View.extend({
         }
 
         $(document.body).removeClass("loading");
-    }
+    },
+    cloudcastChanged: function() {
+        var slug = this.get('controller.slug');
+        $('.cloudcast_playing').removeClass('cloudcast_playing');
+        $('#'+slug).addClass("cloudcast_playing");
+    }.observes('controller.slug').on('didInsertElement')
 });
