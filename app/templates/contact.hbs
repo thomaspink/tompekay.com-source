@@ -5,7 +5,7 @@
         <p>You can catch me on <a href="https://facebook.com/tompekay" target="_blank">facebook</a>,
             <br>follow me on <a href="https://twitter.com/tompekay" target="_blank">twitter</a> or
             <br>listen to my music on <a href="http://mixcloud.com/tompekay" target="_blank">mixcloud</a>.</p>
-        <p>For contact or booking requests, send a <br>mail to thomas.pink [at] me.com of use the form below.</p>
+        <p>For contact or booking requests, please use the form below or send a mail to thomas.pink [at] me.com.</p>
         <i class="contact__icon">...</i>
         {{#if isSpam}}
         <div class="error_block">
@@ -15,7 +15,8 @@
         {{else}}
         {{#if isSent}}
             <div class="success_block">
-                Request successfully sent!
+                <h4>Thank you!</h4>
+                <p>Your request was successfully sent!<br>I will contact you as soon as possible!</p>
             </div>
         {{else}}
         {{#if isError}}
@@ -39,21 +40,21 @@
                 </select>
             </div>
             <div {{bind-attr class=":form_block isEmailError:error"}}>
-                {{input type="email" value=email placeholder="your email address *"}}
+                {{input type="email" value=email placeholder="your email address *" disabled=isSending}}
             </div>
             <div {{bind-attr class=":form_block isNameError:error"}}>
-                {{input type="text" value=name placeholder="your name *"}}
+                {{input type="text" value=name placeholder="your name *" disabled=isSending}}
             </div>
             <div {{bind-attr class=":form_block isMessageError:error"}}>
-                {{textarea placeholder="your message *" value=message rows="4"}}
+                {{textarea placeholder="your message *" value=message rows="4" disabled=isSending}}
             </div>
             {{#if isSending}}
-            <div class="btn">Sending ...</div>
+            <div class="btn"><i class="btn__loading"></i></div>
             {{else}}
             <button class="btn">Send request</button>
             {{/if}}
             <div class="form_block">
-                {{input type="text" value=firstname placeholder="your first name *" class="spamprotect"}}
+                {{input type="text" value=firstname placeholder="your first name *" class="spamprotect" disabled=isSending}}
             </div>
         </form>
         {{/if}}

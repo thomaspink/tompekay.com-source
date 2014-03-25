@@ -96,7 +96,7 @@ textarea {
     -moz-box-sizing: border-box;    /* Firefox, other Gecko */
     box-sizing: border-box;         /* Opera/IE 8+ */
     border-radius: 0;
-    
+
     .error & {
         border-color: #D9534F;
         border-left: 3px solid #D9534F;
@@ -105,11 +105,13 @@ textarea {
 
 .btn {
     display: block;
+    position: relative;
     width: 100%;
     border: 1px solid white;
     color: white;
     line-height: 40px;
-    background: transparent;
+    height: 47px;
+    background: black;
     font-family: Lato, Arial, Verdana, 'Helvetica Neue', Helvetica, sans-serif;
     -webkit-text-size-adjust: 100%;
         -ms-text-size-adjust: 100%;
@@ -124,7 +126,26 @@ textarea {
             background: white;
             color: black;
         }
+        .btn__loading {
+            .no-touch & {
+                background-image: url("../images/spinner_small@2x.gif");
+            }
+        }
     }
+}
+
+.btn__loading {
+    background: url("../images/spinner_small_w@2x.gif") 50% 50% no-repeat;
+    background-size: 24px;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -12px;
+    margin-left: -12px;
+    outline: none;
+    border: none;
 }
 
 .spamprotect {
