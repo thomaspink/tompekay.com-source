@@ -1,7 +1,6 @@
 {{#if fields}}
-<article class="about pane_view">
-    <div class="pane_view__pane">
-        <div class="pane_view__wrapper">
+<article class="about clearfix">
+        <div class="about__wrapper">
             {{#if fields.excerpt}}
             <p class="about__excerpt">{{{fields.excerpt}}}</p>
             {{/if}}
@@ -9,8 +8,5 @@
             <p>{{{fields.text}}}</p>
             {{/if}}
         </div>
-    </div>
-    <aside class="pane_view__pane" style="background-image: url(//images.contentful.com/n2k8iiz52e40/fc8hg1JO8wGcGyEUuYEC0/79c5a274ea794a65f87216cf8333d033/tpk_about.jpg);">
-    </div>
 </article>
 {{/if}}

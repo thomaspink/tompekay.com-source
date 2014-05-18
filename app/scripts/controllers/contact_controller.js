@@ -6,6 +6,8 @@ TompekayCom.ContactController = Ember.Controller.extend({
     isNameError: false,
     isMessageError: false,
     isError: false,
+    requestTypes: [{label: "Booking", id: "booking"}, {label: "Contact", id: "contact"}],
+    selectedRequestType: {label: "Booking", id: "booking"},
     actions: {
         submit: function() {
 
@@ -70,6 +72,11 @@ TompekayCom.ContactController = Ember.Controller.extend({
                         self.set("isServerError",false);
                         self.set("isSending",false);
                         self.set("isSent", true);
+                    }
+
+
+                    if(!!_gaq) {
+                        _gaq.push(['_trackEvent', 'ContactForm', 'successfullySent', ]);
                     }
                 },
                 error: function() {

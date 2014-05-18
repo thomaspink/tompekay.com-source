@@ -9,13 +9,8 @@ TompekayCom.AboutView = Ember.View.extend({
         });
         resizePane();
         function resizePane() {
-            var firstPaneHeight = this.$('.pane_view__pane:eq(0)').height();
             var containerHeight = $(window).height() -120 -70;
-            if(firstPaneHeight > containerHeight) {
-                this.$('.pane_view .pane_view__pane').css("min-height",firstPaneHeight);
-            } else {
-                this.$('.pane_view .pane_view__pane').css("min-height",containerHeight);
-            }
+            this.$('.about').css("min-height",containerHeight);
         }
 
         //setTimeout(function() {

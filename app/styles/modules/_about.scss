@@ -1,19 +1,19 @@
 .about {
-    background: #000;
+    background: url("http://f.cl.ly/items/0B0s0q020o3h1L0D270F/tpk_web2.jpg") 0 100% no-repeat #fafafa;
+    background-size: contain;
     font-size: 18px;
-    color: white;
+    color: black;
 
     p {
-        max-width: 400px;
-        margin: 20px auto;
         font-family: 'Droid Serif', Georgia, serif;
         font-style: italic;
     }
+}
 
-    aside {
-        background-position: 0% 0%;
-        background-size:cover;
-    }
+.about__wrapper {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
 }
 
 .about__excerpt {
@@ -28,6 +28,24 @@
         line-height: 76px;
         padding: 4px 12px 0 0;
     }
+}
+
+@media all and (max-width: 1300px) {
+    .about__wrapper {
+        float: right;
+        padding-right: 40px;
+    }
+}
+
+@media all and (max-width: 915px) {
+    .about__wrapper {
+        background: rgba(255,255,255,.7);
+        padding: 40px 20px;
+        float: none;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
 }
 
 @media all and (max-width: 540px) {
